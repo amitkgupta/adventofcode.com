@@ -1,26 +1,26 @@
 inp_file = ENV["TEST"] == "true" ? "test.txt" : "input.txt"
-inp = File.read(inp_file).split("\n").map(&:chars)
-inp.first.size.times do |i|
-    break if inp.size == 1
-    gps = inp.group_by { |l| l[i] }
-    if gps.size == 1
-        inp = gps.values.first
-    else
-        inp = gps[?1].size >= gps[?0].size ? gps[?1] : gps[?0]
+raw_inp = File.read(inp_file).split("\n\n")
+numbers = raw_inp.first.split(",").map(&:to_i)
+boards = raw_inp[1..-1].map do |chunk|
+    matrix = chunk.split("\n").map { |l| l.split.map(&:to_i) }
+    runs = matrix
+    runs += 5.times.map do |i|
+        matrix.map { |l| l[i] }
+    end
+    runs
+end
+winners = {}
+numbers.each do |n|
+    boards.each_with_index do |b, i|
+        b.each do |r|
+            r.delete(n)
+            if r.empty?
+                winners[i] = true
+                if winners.size == boards.size
+                    puts n * b[0, 5].flatten.reduce(:+)
+                    exit
+                end
+            end
+        end
     end
 end
-o = inp.first
- 
-inp = File.read(inp_file).split("\n").map(&:chars)
-inp.first.size.times do |i|
-    break if inp.size == 1
-    gps = inp.group_by { |l| l[i] }
-    if gps.size == 1
-        inp = gps.values.first
-    else
-        inp = gps[?0].size <= gps[?1].size ? gps[?0] : gps[?1]
-    end
-end
-c = inp.first
-
-puts o.join.to_i(2) * c.join.to_i(2)
