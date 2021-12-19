@@ -56,9 +56,15 @@ while 0 <= i && i < instructions.size
 			c = x
 		when ?d
 			d = x
-		end		
+		end
 
-		i += 1
+		if i == 9
+			a += b
+			b = 0
+			i = 13
+		else
+			i += 1
+		end
 	when "jnz"
 		case v1
 		when ?a
