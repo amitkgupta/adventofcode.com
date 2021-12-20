@@ -8,7 +8,7 @@ First year of Advent of Code. All code done, all stars obtained
 
 Mostly done, except:
 
-- Day 11: in progress
+- Day 11 part 2: got stars, solution needs proof
 - Day 22 part 2: input looks impossible
 
 ## 2017
