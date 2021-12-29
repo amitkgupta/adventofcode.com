@@ -28,4 +28,4 @@ No code, no stars.
 
 ## 2021
 
-Current year. All code and stars for Days 1-21. Days 22-25 not yet released.
+All code and stars for Days 1-21, Day 22 part 1, Day 23, and Day 25.
