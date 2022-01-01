@@ -2,7 +2,7 @@
 
 ## 2015
 
-First year of Advent of Code. All code done, all stars obtained.
+All code complete and stars obtained.
 
 ## 2016
 
@@ -28,4 +28,4 @@ No code, no stars.
 
 ## 2021
 
-All code and stars except for Day 22 part 2.
+All code complete and stars obtained.
