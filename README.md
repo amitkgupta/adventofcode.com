@@ -6,9 +6,7 @@ All code complete and stars obtained.
 
 ## 2016
 
-Mostly done, except:
-
-- Day 22 part 2: input looks impossible
+All code complete and stars obtained.
 
 ## 2017
 
