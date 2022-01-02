@@ -12,7 +12,7 @@ Mostly done, except:
 
 ## 2017
 
-Code and stars except for Day 21 (both parts) and Day 23 Part 2.
+Code and stars except for Day 21.
 
 ## 2018
 
