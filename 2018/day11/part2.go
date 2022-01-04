@@ -3,7 +3,7 @@ package main
 import "math"
 import "fmt"
 
-const serialNumber = 6878
+const serialNumber = 9306
 
 func mod(a, b int) int {
 	return int(math.Mod(float64(a), float64(b)))
@@ -61,4 +61,4 @@ func main() {
 		}
 	}
 	fmt.Printf("%d,%d,%d", x,y,s)
-}	
+}
