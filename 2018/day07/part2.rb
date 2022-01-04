@@ -31,7 +31,7 @@ blocked = ("A".."Z").to_a
 available = []
 finished = 0
 
-instructions = File.read(File.expand_path("input.txt", __dir__)).split("\n")
+instructions = File.read("input.txt").split("\n")
 
 total_time = 0
 

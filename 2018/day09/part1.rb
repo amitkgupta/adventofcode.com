@@ -1,5 +1,5 @@
-NUM_PLAYERS = 459
-LAST_MARBLE_VALUE = 71790
+NUM_PLAYERS = 464
+LAST_MARBLE_VALUE = 70918
 
 scores = Array.new(NUM_PLAYERS, 0)
 circle = [0]
@@ -19,4 +19,3 @@ current_index = 0
 end
 
 puts scores.max
-puts scores.index(scores.max)

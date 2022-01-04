@@ -25,7 +25,6 @@ class Node
 	end
 
 	def value
-		# @metadata.inject(0,&:+) + @children.map(&:value).inject(0,&:+)
 		@children.empty? ?
 		@metadata.inject(0,&:+) :
 		@metadata.map { |i| @children[i-1] }.compact.map(&:value).inject(0,&:+)
@@ -115,5 +114,5 @@ def build_tree(license)
 	end
 end
 
-root = build_tree(File.read(File.expand_path("input.txt", __dir__)).split(" ").map(&:to_i))
+root = build_tree(File.read("input.txt").split.map(&:to_i))
 puts root.value

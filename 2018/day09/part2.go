@@ -3,8 +3,8 @@ package main
 import "math"
 
 const (
-	numPlayers = 459
-	lastMarbleValue = 7179000
+	numPlayers = 464
+	lastMarbleValue = 7091800
 )
 
 type node struct {
