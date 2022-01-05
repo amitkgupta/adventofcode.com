@@ -108,42 +108,24 @@ class Carts
 	end
 
 	def move_on(map)
-		i = 0
-		loop do
-			if i >= @carts.length
-				break
-			end
+		@carts.sort!
 
-			cart = @carts[i]
+		@carts.each do |cart|
 			cart.move_on(map.next_track(cart.x, cart.y, cart.orientation))
-			colliding_cart_index = (@carts - [cart]).index { |other_cart| cart == other_cart }
-			if colliding_cart_index.nil?
-				i += 1
-			else
-				@carts.delete_at(colliding_cart_index)
-				@carts.delete(cart)
-				i -= 1 if colliding_cart_index < i
-			end
+			return "#{cart.x},#{cart.y}" if (@carts - [cart]).any? { |other_cart| cart == other_cart }
 		end
 
-		if @carts.size == 1
-			cart = @carts.first
-			return cart.x, cart.y
-		else
-			@carts.sort!
-			return nil
-		end
+		nil
 	end
 end
 
-inp_file = ENV["TEST"] == "true" ? "test2.txt" : "input.txt"
+inp_file = ENV["TEST"] == "true" ? "test1.txt" : "input.txt"
 map = Map.new(inp_file)
 carts = Carts.new(inp_file)
 
 loop do
 	if coords = carts.move_on(map)
-		print coords.join(?,)
-		puts
+		puts coords
 		break
 	end
 end

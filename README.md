@@ -14,7 +14,7 @@ All code complete and stars obtained.
 
 ## 2018
 
-Code and stars for Days 1-12. Some code but no stars for Days 13-25.
+Code and stars for Days 1-13. Some code but no stars for Days 14-25.
 
 ## 2019
 
